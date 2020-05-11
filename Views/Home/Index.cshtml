@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Repaso_MVC_Miguel.Models.Entrada>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2 align="center">Lista de Entradas</h2>
+    <div> 
+        <table border="1">
+            <tr>
+                <th>ID Entrada</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>ID Producto</th>
+            </tr>
+            @foreach (var entrada in Model)
+            {
+                <tr>
+                    <td>@entrada.IdEntrada</td>
+                    <td>@entrada.Cantidad</td>
+                    <td>@entrada.Fecha</td>
+                    <td>@entrada.Hora</td>
+                    <td>@entrada.IdProducto</td>
+
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
